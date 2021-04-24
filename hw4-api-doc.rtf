@@ -1,0 +1,2562 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\fswiss\fcharset0 Helvetica-Bold;
+\f3\fmodern\fcharset0 Courier;\f4\ftech\fcharset77 Symbol;\f5\fmodern\fcharset0 CourierNewPSMT;
+\f6\fswiss\fcharset0 Helvetica-Oblique;\f7\froman\fcharset0 TimesNewRomanPS-ItalicMT;}
+{\colortbl;\red255\green255\blue255;\red5\green99\blue193;\red47\green84\blue150;\red191\green191\blue191;
+\red31\green55\blue99;\red45\green59\blue69;\red45\green59\blue69;\red47\green84\blue150;\red191\green191\blue191;
+\red31\green55\blue99;}
+{\*\expandedcolortbl;;\csgenericrgb\c1961\c38824\c75686;\csgenericrgb\c18431\c32941\c58824;\csgray\c79525;
+\csgenericrgb\c12157\c21569\c38824;\csgenericrgb\c17647\c23137\c27059;\csgenericrgb\c17647\c23137\c27059;\csgenericrgb\c18431\c32941\c58824;\csgray\c79525;
+\csgenericrgb\c12157\c21569\c38824;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+{\info
+{\author Nauman Chaudhry}}\margl1440\margr1440\vieww12540\viewh14880\viewkind1\viewscale98
+\deftab720
+\pard\pardeftab720\ri0\qc\partightenfactor0
+
+\f0\fs44 \cf0 \kerning1\expnd-2\expndtw-10
+Assignment 3: API Spec
+\f1 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\qc\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+CS 493: Cloud Application Development\
+Spring 2021\
+Oregon State University\
+Last Update: April 11, 2021. 11:00 am Pacific\
+\pard\tqr\tx9350\pardeftab720\ri0\sl259\slmult1\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "%5Cl%20%22_Toc69119955%22"}}{\fldrslt \cf2 \kerning1\expnd-2\expndtw-10
+\ul \ulc2 Change log\cf0 \kerning1\expnd-2\expndtw-10
+\ulnone 	1}}\kerning1\expnd-2\expndtw-10
+\
+\pard\tqr\tx9350\pardeftab720\ri0\sl259\slmult1\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "%5Cl%20%22_Toc69119956%22"}}{\fldrslt \cf2 \kerning1\expnd-2\expndtw-10
+\ul \ulc2 Create a Boat\cf0 \kerning1\expnd-2\expndtw-10
+\ulnone 	2}}\
+\pard\tqr\tx9350\pardeftab720\ri0\sl259\slmult1\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "%5Cl%20%22_Toc69119957%22"}}{\fldrslt \cf2 \kerning1\expnd-2\expndtw-10
+\ul \ulc2 Get a Boat\cf0 \kerning1\expnd-2\expndtw-10
+\ulnone 	4}}\
+\pard\tqr\tx9350\pardeftab720\ri0\sl259\slmult1\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "%5Cl%20%22_Toc69119958%22"}}{\fldrslt \cf2 \kerning1\expnd-2\expndtw-10
+\ul \ulc2 List all Boats\cf0 \kerning1\expnd-2\expndtw-10
+\ulnone 	5}}\
+\pard\tqr\tx9350\pardeftab720\ri0\sl259\slmult1\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "%5Cl%20%22_Toc69119959%22"}}{\fldrslt \cf2 \kerning1\expnd-2\expndtw-10
+\ul \ulc2 Edit a Boat\cf0 \kerning1\expnd-2\expndtw-10
+\ulnone 	6}}\
+\pard\tqr\tx9350\pardeftab720\ri0\sl259\slmult1\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "%5Cl%20%22_Toc69119960%22"}}{\fldrslt \cf2 \kerning1\expnd-2\expndtw-10
+\ul \ulc2 Delete a Boat\cf0 \kerning1\expnd-2\expndtw-10
+\ulnone 	8}}\
+\pard\tqr\tx9350\pardeftab720\ri0\sl259\slmult1\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "%5Cl%20%22_Toc69119961%22"}}{\fldrslt \cf2 \kerning1\expnd-2\expndtw-10
+\ul \ulc2 Create a load\cf0 \kerning1\expnd-2\expndtw-10
+\ulnone 	9}}\
+\pard\tqr\tx9350\pardeftab720\ri0\sl259\slmult1\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "%5Cl%20%22_Toc69119962%22"}}{\fldrslt \cf2 \kerning1\expnd-2\expndtw-10
+\ul \ulc2 Get a load\cf0 \kerning1\expnd-2\expndtw-10
+\ulnone 	11}}\
+\pard\tqr\tx9350\pardeftab720\ri0\sl259\slmult1\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "%5Cl%20%22_Toc69119963%22"}}{\fldrslt \cf2 \kerning1\expnd-2\expndtw-10
+\ul \ulc2 List all loads\cf0 \kerning1\expnd-2\expndtw-10
+\ulnone 	12}}\
+\pard\tqr\tx9350\pardeftab720\ri0\sl259\slmult1\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "%5Cl%20%22_Toc69119964%22"}}{\fldrslt \cf2 \kerning1\expnd-2\expndtw-10
+\ul \ulc2 Delete a load\cf0 \kerning1\expnd-2\expndtw-10
+\ulnone 	13}}\
+\pard\tqr\tx9350\pardeftab720\ri0\sl259\slmult1\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "%5Cl%20%22_Toc69119965%22"}}{\fldrslt \cf2 \kerning1\expnd-2\expndtw-10
+\ul \ulc2 Boat Arrives at a load\cf0 \kerning1\expnd-2\expndtw-10
+\ulnone 	14}}\
+\pard\tqr\tx9350\pardeftab720\ri0\sl259\slmult1\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "%5Cl%20%22_Toc69119966%22"}}{\fldrslt \cf2 \kerning1\expnd-2\expndtw-10
+\ul \ulc2 Boat Departs a load\cf0 \kerning1\expnd-2\expndtw-10
+\ulnone 	16}}\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb240\partightenfactor0
+
+\fs32 \cf3 \kerning1\expnd-2\expndtw-10
+Change log\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth914\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth6480\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth2155\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Version\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Change\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Date\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth914\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth6480\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth2155\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+1.0\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Initial version.\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+April 11 2021\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\page \pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs32 \cf3 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb240\partightenfactor0
+\cf3 \kerning1\expnd-2\expndtw-10
+Create a Boat\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Allows you to create a new boat.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+POST /boats\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Request
+\f1 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f0\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Path Parameters
+\f1 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Required\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request JSON Attributes\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5670\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth1255\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Name\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Type\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Description\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Required?\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5670\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth1255\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+name\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+String\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+The name of the boat.\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Yes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5670\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth1255\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+type\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+String\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+The type of the boat. E.g., Sailboat, Catamaran, etc.\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Yes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5670\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth1255\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+length\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Integer\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Length of the boat in feet.\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Yes\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body Example\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\{\
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"name": "Sea Witch",\
+  "type": "Catamaran",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"length": 28\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\}\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Response\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Statuses\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Outcome\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Status Code\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Notes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+Success\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+201 Created\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Failure\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+400 Bad Request\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+If the request is missing any of the 3 required attributes, the boat must not be created, and 400 status code must be returned.\
+\
+You don\'92t need to validate the values of the attributes and can assume that if the request contains any of the listed attributes, then that attribute\'92s value is valid.\
+\
+You can also assume that the request will not contain any extraneous attribute (i.e., the request JSON will never contain any attribute that is not listed above).\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Examples\
+\pard\pardeftab720\li360\fi-360\ri0\sl276\slmult1\sa200\partightenfactor0
+\ls1\ilvl0
+\f4\fs22 \cf0 \kerning1\expnd0\expndtw0 \'a5	
+\f0 \kerning1\expnd-2\expndtw-10
+Datastore will automatically generate an ID and store it with the entity being created. Your app must send back this value in the response body as shown in the example.\
+\ls1\ilvl0
+\f4 \kerning1\expnd0\expndtw0 \'a5	
+\f0 \kerning1\expnd-2\expndtw-10
+The 
+\f5 \kerning1\expnd-2\expndtw-10
+self
+\f0 \kerning1\expnd-2\expndtw-10
+ attribute will contain the live link to the REST resource corresponding to this boat. In other words, this is the URL to get this newly created boat. You must not store the 
+\f5 \kerning1\expnd-2\expndtw-10
+self
+\f0 \kerning1\expnd-2\expndtw-10
+ attribute in Datastore\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i \cf3 \kerning1\expnd-2\expndtw-10
+Success
+\f7 \kerning1\expnd-2\expndtw-10
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 201 Created\
+\
+\{\
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"id": "abc123",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"name": "Sea Witch",\
+  "type": "Catamaran",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"length": 28,\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"self": "https://<your-app>/boats/abc123"\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\}\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i \cf3 \kerning1\expnd-2\expndtw-10
+Failure
+\f7 \kerning1\expnd-2\expndtw-10
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 400 Bad Request\
+\
+\{    \
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"Error": 
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+ 
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"The request object is missing at least one of the required attributes"\
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\}\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\page \pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs32 \cf3 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb240\partightenfactor0
+\cf3 \kerning1\expnd-2\expndtw-10
+Get a Boat\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Allows you to get an existing boat\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+GET /boats/:boat_id\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Request\
+Path Parameters
+\f1 \kerning1\expnd-2\expndtw-10
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6863\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Name\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Type\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6863\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+boat_id\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 String\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 ID of the boat\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body
+\f1 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Response\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Statuses\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Outcome\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Status Code\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Notes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+Success\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+200 OK\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Failure\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+404 Not Found\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+No boat with this boat_id exists\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Examples\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i\fs22 \cf3 \kerning1\expnd-2\expndtw-10
+Success\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 200 OK\
+\
+\{ "id": 1234,      # automatically generated by Datastore\
+  "name": "Sea Witch",  # The name of the boat, a string\
+  "type": "Catamaran",   # The type of boat, power boat, sailboat, catamaran etc. a string\
+  "length": 28,          # The length of the boat, an integer\
+  "loads":[\
+   \{"id": 5678,\
+    "self":"https://<your-app>/loads/5678"\},\
+    \{"id": 8765,\
+    "self":"https://<your-app>/loads/8765"\}\
+  ], # This embedded list does NOT need to paginate.\
+ "self":"https://<your-app>/boats/1234"\
+\}\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i \cf3 \kerning1\expnd-2\expndtw-10
+Failure
+\f7 \kerning1\expnd-2\expndtw-10
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 404 Not Found\
+\
+\{    \
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"Error": 
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+ 
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"No boat with this boat_id exists" \
+\}
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\page \pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs32 \cf3 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb240\partightenfactor0
+\cf3 \kerning1\expnd-2\expndtw-10
+List all Boats\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+List all the boats. Implements pagination with 3 boats per page.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+GET /boats\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Request\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Path Parameters
+\f1 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Response\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Statuses\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Outcome\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Status Code\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Notes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+Success\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 200 OK\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Examples\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i\fs22 \cf3 \kerning1\expnd-2\expndtw-10
+Success\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 200 OK\
+\
+// is this correct? Should the list of boats have a key? \
+\
+\{\
+\'93next\'94: 
+\f3\fs20 \cf7 \kerning1\expnd-2\expndtw-10
+"https://<your-app>/boats?limit=3&offset=3\'94
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+,\
+\'93boats\'94: [\
+\{\
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"id": "abc123",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"name": "Sea Witch",\
+  "type": "Catamaran",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"length": 28,\
+  "loads":[\
+   \{"id": 5678,\
+    "self":"https://<your-app>/loads/5678"\},\
+    \{"id": 8765,\
+    "self":"https://<your-app>/loads/8765"\}\
+  ], \
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"self": "https://<your-app>/boats/abc123"\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\},\
+\{\
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"id": "def456",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"name": "Adventure",\
+  "type": "Sailboat",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"length": 50,\cf7 \kerning1\expnd-2\expndtw-10
+\
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf7   "loads":[\
+   \{"id": 5678,\
+    "self":"https://<your-app>/loads/5678"\},\
+    \{"id": 8765,\
+    "self":"https://<your-app>/loads/8765"\}\
+  ],\cf6 \kerning1\expnd-2\expndtw-10
+\
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"self": "https://<your-app>/boats/def456"\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\},\
+\{\
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"id": "xyz123",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"name": "Hocus Pocus",\
+  "type": "Sailboat",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"length": 100,\cf7 \kerning1\expnd-2\expndtw-10
+\
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf7   "loads":[\
+   \{"id": 5678,\
+    "self":"https://<your-app>/loads/5678"\},\
+    \{"id": 8765,\
+    "self":"https://<your-app>/loads/8765"\}\
+  ],\cf6 \kerning1\expnd-2\expndtw-10
+\
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"self": "https://<your-app>/boats/xyz123"\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\}\
+]\
+\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\page \pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs32 \cf3 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb240\partightenfactor0
+\cf3 \kerning1\expnd-2\expndtw-10
+Edit a Boat\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Allows you to edit a boat. Including add loads.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+PATCH /boats/:boat_id\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Request\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Path Parameters
+\f1 \kerning1\expnd-2\expndtw-10
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Name\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Type\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+boat_id\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 String\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 ID of the boat\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Required\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request JSON Attributes\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5670\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth1255\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Name\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Type\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Description\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Required?\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5670\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth1255\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+name\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 String\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 The name of the boat.\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Yes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5670\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth1255\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+type\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 String\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 The type of the boat. E.g., Sailboat, Catamaran, etc.\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Yes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5670\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth1255\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+length\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Integer\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Length of the boat in feet.\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Yes\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body Example\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\{\
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"name": "Sea Witch",\
+  "type": "Catamaran",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"length": 99\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\}\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Response\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Statuses\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Outcome\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Status Code\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Notes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+Success\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 200 OK\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Failure\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 400 Bad Request\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 If the request is missing any of the 3 required attributes, the boat must not be updated, and 400 status code must be returned.\
+\
+You don\'92t need to validate the values of the attributes and can assume that if the request contains any of the listed attributes, then that attribute\'92s value is valid.\
+\
+You can also assume that the request will not contain any extraneous attribute (i.e., the request JSON will never contain any attribute other than the ones that are listed).\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Failure\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 404 Not Found\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 No boat with this boat_id exists\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Examples\
+\pard\pardeftab720\li360\fi-360\ri0\sl276\slmult1\sa200\partightenfactor0
+\ls2\ilvl0
+\f4\fs22 \cf0 \kerning1\expnd0\expndtw0 \'a5	
+\f0 \kerning1\expnd-2\expndtw-10
+The 
+\f5 \kerning1\expnd-2\expndtw-10
+self 
+\f0 \kerning1\expnd-2\expndtw-10
+attribute will contain the live link to the REST resource corresponding to this boat. You must not store this attribute in Datastore.\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i \cf3 \kerning1\expnd-2\expndtw-10
+Success\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 200 OK\
+\
+\{\
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"id": "abc123",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"name": "Sea Witch",\
+  "type": "Catamaran",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"length": 99,\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"self": "https://<your-app>/boats/abc123"\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\}\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i \cf3 \kerning1\expnd-2\expndtw-10
+Failure\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 400 Bad Request\
+\
+\{    \
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"Error": 
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+ 
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"The request object is missing at least one of the required attributes"\
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\}\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f7\i \cf3 \kerning1\expnd-2\expndtw-10
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 404 Not Found\
+\
+\{    \
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"Error": 
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+ 
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"No boat with this boat_id exists" \
+\}
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\page \pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs32 \cf3 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb240\partightenfactor0
+\cf3 \kerning1\expnd-2\expndtw-10
+Delete a Boat\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Allows you to delete a boat. Will unload any loads that were loaded onto it.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+DELETE /boats/:boat_id\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Request\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Path Parameters
+\f1 \kerning1\expnd-2\expndtw-10
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Name\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Type\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+boat_id\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 String\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 ID of the boat\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Response\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+No body\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Success: No body \
+Failure: JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Statuses\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Outcome\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Status Code\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Notes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+Success\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 204 No Content\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Failure\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 404 Not Found\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+No boat with this boat_id exists\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Examples\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i\fs22 \cf3 \kerning1\expnd-2\expndtw-10
+Success\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 204 No Content\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i \cf3 \kerning1\expnd-2\expndtw-10
+Failure\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 404 Not Found\
+\
+\{    \
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"Error": 
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+ 
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"No boat with this boat_id exists" \
+\}
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\
+\page \pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs32 \cf3 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb240\partightenfactor0
+\cf3 \kerning1\expnd-2\expndtw-10
+Create a load\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Allows you to create a new load. Begin unassigned to any boat.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+POST /loads\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Request\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Path Parameters\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body
+\f1 \kerning1\expnd-2\expndtw-10
+\strike \strikec5 \
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\strike0\striked0 Required\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request JSON Attributes\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5670\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth1255\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Name\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Type\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Description\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Required?\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5670\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth1255\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+number\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Integer\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 The name of the boat.\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Yes\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body Example\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\{\
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"number": 1\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\}
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f0\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Response\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Statuses\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Outcome\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Status Code\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Notes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+Success\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 201 Created\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Failure\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 400 Bad Request\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 If the request is missing the number attribute, the load must not be created, and 400 status code must be returned.\
+\
+You don\'92t need to validate the values of this attribute and can assume that if the number attribute is specified, then its value is valid.\
+\
+You can also assume that the request will not contain any extraneous attribute (i.e., the request JSON will never contain any attribute other than number).\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Examples\
+\pard\pardeftab720\li360\fi-360\ri0\sl276\slmult1\sa200\partightenfactor0
+\ls3\ilvl0
+\f4\fs22 \cf0 \kerning1\expnd0\expndtw0 \'a5	
+\f0 \kerning1\expnd-2\expndtw-10
+Datastore will automatically generate an ID and store it with the entity being created. This value needs to be sent in the response body as shown in the example.\
+\ls3\ilvl0
+\f4 \kerning1\expnd0\expndtw0 \'a5	
+\f0 \kerning1\expnd-2\expndtw-10
+The value of the attribute 
+\f5 \kerning1\expnd-2\expndtw-10
+current_boat
+\f0 \kerning1\expnd-2\expndtw-10
+ is the ID of the boat currently at this load. If there is no boat at this load, the value of 
+\f5 \kerning1\expnd-2\expndtw-10
+current_boat
+\f0 \kerning1\expnd-2\expndtw-10
+ should be null.\
+\ls3\ilvl0
+\f4 \kerning1\expnd0\expndtw0 \'a5	
+\f0 \kerning1\expnd-2\expndtw-10
+The value of the attribute 
+\f5 \kerning1\expnd-2\expndtw-10
+self
+\f0 \kerning1\expnd-2\expndtw-10
+ is a live link to the REST resource corresponding to this load. In other words, this is the URL to get this newly created load. You must not store this attribute in Datastore.\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i \cf3 \kerning1\expnd-2\expndtw-10
+Success\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 201 Created\
+\
+\{\
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"id": "123abc",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"number": 1,\
+  "current_boat": null,\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"self": "https://<your-app>/loads/123abc"\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\}\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i \cf3 \kerning1\expnd-2\expndtw-10
+Failure\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 400 Bad Request\
+\
+\{    \
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"Error": 
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+ 
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"The request object is missing the required number"\
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\}\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\page \pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs32 \cf3 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb240\partightenfactor0
+\cf3 \kerning1\expnd-2\expndtw-10
+Get a load
+\f1 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Allows you to get an existing load.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+GET /loads/:load_id\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Request\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Path Parameters
+\f1 \kerning1\expnd-2\expndtw-10
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Name\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Type\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+load_id\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 String\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 ID of the load\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Response\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Statuses\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Outcome\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Status Code\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Notes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+Success\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 200 OK\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Failure\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 404 Not Found\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+No load with this load_id exists\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Examples\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i\fs22 \cf3 \kerning1\expnd-2\expndtw-10
+Success\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth9355\trftsWidth3 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9355\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 200 OK\
+\
+\{\
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"id": "123abc",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"number": 1\
+  "current_boat": "abc123",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"self": "https://<your-app>/loads/123abc"\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\}\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i \cf3 \kerning1\expnd-2\expndtw-10
+Failure\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 404 Not Found\
+\
+\{    \
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"Error": 
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+ 
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"No load with this load_id exists" \
+\}
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\page \pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs32 \cf3 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb240\partightenfactor0
+\cf3 \kerning1\expnd-2\expndtw-10
+List all loads\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+List all the loads. Implements pagination with 3 loads per page\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+GET /loads\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Request\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Path Parameters
+\f1 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Response\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Statuses\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Outcome\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Status Code\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Notes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+Success\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 200 OK\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Examples\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i\fs22 \cf3 \kerning1\expnd-2\expndtw-10
+Success\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 200 OK\
+\
+[\
+\{\
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"id": "123abc",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"number": 1,\
+  "current_boat": "abc123",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"self": "https://<your-app>/loads/123abc"\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\},\
+\{\
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"id": "456def",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"number": 2,\
+  "current_boat": null,\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"self": "https://<your-app>/loads/456def"\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\}\
+]\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb240\partightenfactor0
+
+\fs32 \cf8 \kerning1\expnd-2\expndtw-10
+List all loads on a given boat\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+List all the loads. Implements pagination with 3 loads per page\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf9 \trbrdrl\brdrs\brdrw10\brdrcf9 \trbrdrb\brdrs\brdrw10\brdrcf9 \trbrdrr\brdrs\brdrw10\brdrcf9 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf9 \clbrdrl\brdrs\brdrw10\brdrcf9 \clbrdrb\brdrs\brdrw10\brdrcf9 \clbrdrr\brdrs\brdrw10\brdrcf9 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+GET /loads\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf8 \kerning1\expnd-2\expndtw-10
+Request\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf10 \kerning1\expnd-2\expndtw-10
+Path Parameters
+\f1 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf10 \kerning1\expnd-2\expndtw-10
+Request Body\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf8 \kerning1\expnd-2\expndtw-10
+Response\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf10 \kerning1\expnd-2\expndtw-10
+Response Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf10 \kerning1\expnd-2\expndtw-10
+Response Statuses\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf9 \trbrdrl\brdrs\brdrw10\brdrcf9 \trbrdrr\brdrs\brdrw10\brdrcf9 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf9 \clbrdrl\brdrs\brdrw10\brdrcf9 \clbrdrb\brdrs\brdrw10\brdrcf9 \clbrdrr\brdrs\brdrw10\brdrcf9 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf9 \clbrdrl\brdrs\brdrw10\brdrcf9 \clbrdrb\brdrs\brdrw10\brdrcf9 \clbrdrr\brdrs\brdrw10\brdrcf9 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf9 \clbrdrl\brdrs\brdrw10\brdrcf9 \clbrdrb\brdrs\brdrw10\brdrcf9 \clbrdrr\brdrs\brdrw10\brdrcf9 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Outcome\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Status Code\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Notes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf9 \trbrdrb\brdrs\brdrw10\brdrcf9 \trbrdrr\brdrs\brdrw10\brdrcf9 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf9 \clbrdrl\brdrs\brdrw10\brdrcf9 \clbrdrb\brdrs\brdrw10\brdrcf9 \clbrdrr\brdrs\brdrw10\brdrcf9 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf9 \clbrdrl\brdrs\brdrw10\brdrcf9 \clbrdrb\brdrs\brdrw10\brdrcf9 \clbrdrr\brdrs\brdrw10\brdrcf9 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf9 \clbrdrl\brdrs\brdrw10\brdrcf9 \clbrdrb\brdrs\brdrw10\brdrcf9 \clbrdrr\brdrs\brdrw10\brdrcf9 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+Success\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 200 OK\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf10 \kerning1\expnd-2\expndtw-10
+Response Examples\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i\fs22 \cf8 \kerning1\expnd-2\expndtw-10
+Success\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf9 \trbrdrl\brdrs\brdrw10\brdrcf9 \trbrdrb\brdrs\brdrw10\brdrcf9 \trbrdrr\brdrs\brdrw10\brdrcf9 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf9 \clbrdrl\brdrs\brdrw10\brdrcf9 \clbrdrb\brdrs\brdrw10\brdrcf9 \clbrdrr\brdrs\brdrw10\brdrcf9 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 200 OK\
+\
+[\
+\{\
+    
+\f3\fs20 \cf7 \kerning1\expnd-2\expndtw-10
+"id": "123abc",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf7 \kerning1\expnd-2\expndtw-10
+"number": 1,\
+  "current_boat": "abc123",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf7 \kerning1\expnd-2\expndtw-10
+"self": "https://<your-app>/loads/123abc"\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\},\
+\{\
+    
+\f3\fs20 \cf7 \kerning1\expnd-2\expndtw-10
+"id": "456def",\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf7 \kerning1\expnd-2\expndtw-10
+"number": 2,\
+  "current_boat": null,\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+    
+\f3\fs20 \cf7 \kerning1\expnd-2\expndtw-10
+"self": "https://<your-app>/loads/456def"\
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\}\
+]\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\page \pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\page \pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs32 \cf3 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb240\partightenfactor0
+\cf3 \kerning1\expnd-2\expndtw-10
+Delete a load
+\f1 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Allows you to delete a load. If the load being deleted is loaded onto a boat, the load should be removed from that boat.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+DELETE /loads/:load_id\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Request\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Path Parameters
+\f1 \cf0 \kerning1\expnd-2\expndtw-10
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Name\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Type\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+load_id\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 String\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 ID of the load\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Response\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+No body\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Success: No body \
+Failure: JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Statuses\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Outcome\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Status Code\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Notes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+Success\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 204 No Content\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Failure\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 404 Not Found\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+No load with this load_id exists\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Examples\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i\fs22 \cf3 \kerning1\expnd-2\expndtw-10
+Success\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 204 No Content\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i \cf3 \kerning1\expnd-2\expndtw-10
+Failure\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 404 Not Found\
+\
+\{    \
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"Error": 
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+ 
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"No load with this load_id exists" \
+\}
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\
+\page \pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs32 \cf3 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb240\partightenfactor0
+\cf3 \kerning1\expnd-2\expndtw-10
+Put load onto a boat\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Boat has arrived at a load.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+PUT /loads/:load_id/:boat_id\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Request\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Path Parameters
+\f1 \kerning1\expnd-2\expndtw-10
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Name\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Type\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+load_id\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 String\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 ID of the load\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+boat_id\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 ID of the boat\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+Note: Set Content-Length to 0 in your request when calling out to this endpoint.\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Response\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+No body\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Success: No body \
+Failure: JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Statuses\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Outcome\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Status Code\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Notes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+Success\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 204 No Content\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Succeeds only if a boat exists with this boat_id, a load exists with this load_id and the load is empty.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Failure\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 403 Forbidden\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 There is already a boat at this load. \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Failure\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 404 Not Found\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+No boat with this boat_id exists, and/or no load with this load_id exits. \cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Examples\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i\fs22 \cf3 \kerning1\expnd-2\expndtw-10
+Success\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 204 No Content\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i \cf3 \kerning1\expnd-2\expndtw-10
+Failure
+\f7 \kerning1\expnd-2\expndtw-10
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 403 Forbidden\
+\
+\{    \
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"Error": 
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+ 
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"The load is not empty" \
+\}
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Status: 404 Not Found\
+\
+\{    \
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"Error": 
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+ 
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"The specified boat and/or load does not exist" \
+\}
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Comment\
+\pard\pardeftab720\li360\fi-360\ri0\sl276\slmult1\sa200\partightenfactor0
+\ls4\ilvl0
+\f4\fs22 \cf0 \kerning1\expnd0\expndtw0 \'a5	
+\f0 \kerning1\expnd-2\expndtw-10
+A boat cannot be assigned to multiple loads.\
+\ls4\ilvl0
+\f4 \kerning1\expnd0\expndtw0 \'a5	
+\f0 \kerning1\expnd-2\expndtw-10
+However, in grading the assignment, we will not test this scenario, i.e., if a boat is already assigned to a load, we will not send requests that this boat be assigned to another load\
+\ls4\ilvl0
+\f4 \kerning1\expnd0\expndtw0 \'a5	
+\f0 \kerning1\expnd-2\expndtw-10
+Implementing a check to prevent such multiple assignments for a boat is optional.\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\page \pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs32 \cf3 \kerning1\expnd-2\expndtw-10
+\
+\pard\pardeftab720\ri0\sl259\slmult1\sb240\partightenfactor0
+\cf3 \kerning1\expnd-2\expndtw-10
+Remove load from a boat\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Boat has left the load to go to sea. The load is now empty.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+DELETE /loads/:load_id/:boat_id\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Request\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Path Parameters
+\f1 \kerning1\expnd-2\expndtw-10
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Name\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Type\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+load_id\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 String\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 ID of the load\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1165\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1260\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth6953\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+boat_id\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 ID of the boat\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Request Body\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+None\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs26 \cf3 \kerning1\expnd-2\expndtw-10
+Response\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+No body\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Body Format\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Success: No body \
+Failure: JSON\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Statuses\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f2\b\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+Outcome\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Status Code\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Notes\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \kerning1\expnd-2\expndtw-10
+Success\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+204 No Content\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Succeeds only if a boat exists with this boat_id, a load exists with this load_id and this boat is at this load.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth1615\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2340\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth5395\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+Failure\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 404 Not Found\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+No boat with this boat_id is at the load with this load_id. \cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\fs24 \cf5 \kerning1\expnd-2\expndtw-10
+Response Examples\
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i\fs22 \cf3 \kerning1\expnd-2\expndtw-10
+Success\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 204 No Content\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sb40\partightenfactor0
+
+\f6\i \cf3 \kerning1\expnd-2\expndtw-10
+Failure\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf4 \trbrdrl\brdrs\brdrw10\brdrcf4 \trbrdrb\brdrs\brdrw10\brdrcf4 \trbrdrr\brdrs\brdrw10\brdrcf4 
+\clvertalt \clshdrawnil \clwWidth9350\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf4 \clbrdrl\brdrs\brdrw10\brdrcf4 \clbrdrb\brdrs\brdrw10\brdrcf4 \clbrdrr\brdrs\brdrw10\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd-2\expndtw-10
+Status: 404 Not Found\
+\
+\{    \
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"Error": 
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+ 
+\f3\fs20 \cf6 \kerning1\expnd-2\expndtw-10
+"No boat with this boat_id is at the load with this load_id" \
+\}
+\f0\fs22 \cf0 \kerning1\expnd-2\expndtw-10
+\cell \lastrow\row
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+\cf0 \kerning1\expnd-2\expndtw-10
+\
+\
+\
+}
